@@ -56,6 +56,17 @@
           "permissions": [
             "android.permission.INTERNET"
           ]
+        },
+        "0.2.0": {
+          "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-network-v0.2.0/hyo-network-0.2.0.tar.gz",
+          "sha256": "76c4cada6d710d9e14e5eba1d32c1327c60c7b868efd34097bec7b5da7bd5c3a",
+          "entrypoint": "init.lua",
+          "dependencies": {
+            "hyo-core": ">=0.1.0"
+          },
+          "permissions": [
+            "android.permission.INTERNET"
+          ]
         }
       }
     },
