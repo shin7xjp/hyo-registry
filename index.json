@@ -12,6 +12,15 @@
             "hyo-core": ">=0.1.0"
           },
           "permissions": []
+        },
+        "0.2.0": {
+          "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-animation-v0.2.0/hyo-animation-0.2.0.tar.gz",
+          "sha256": "6f875f859279fde7d0ea22a8b129a1d5e5acda1410bea2a64d2681e6fddccbec",
+          "entrypoint": "init.lua",
+          "dependencies": {
+            "hyo-core": ">=0.1.0"
+          },
+          "permissions": []
         }
       }
     },
@@ -26,6 +35,15 @@
             "hyo-core": ">=0.1.0"
           },
           "permissions": []
+        },
+        "0.2.0": {
+          "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-i18n-v0.2.0/hyo-i18n-0.2.0.tar.gz",
+          "sha256": "9c94159e2b3a215c11abae1ea44b8cef960c20431efe39e7ce26026fa124c8c2",
+          "entrypoint": "init.lua",
+          "dependencies": {
+            "hyo-core": ">=0.1.0"
+          },
+          "permissions": []
         }
       }
     },
@@ -35,6 +53,15 @@
         "0.1.0": {
           "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-navigation-v0.1.0/hyo-navigation-0.1.0.tar.gz",
           "sha256": "ac2081397a7ea1263d59c589ddb65ba0c2b5e4d3371e5554cb22314ce50fcbec",
+          "entrypoint": "init.lua",
+          "dependencies": {
+            "hyo-core": ">=0.1.0"
+          },
+          "permissions": []
+        },
+        "0.2.0": {
+          "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-navigation-v0.2.0/hyo-navigation-0.2.0.tar.gz",
+          "sha256": "8867aa6cc2a71a94a6fe0d1a60c56db3dee4286f4a946e593cf80e9ab810d85b",
           "entrypoint": "init.lua",
           "dependencies": {
             "hyo-core": ">=0.1.0"
@@ -81,6 +108,15 @@
             "hyo-core": ">=0.1.0"
           },
           "permissions": []
+        },
+        "0.2.0": {
+          "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-storage-v0.2.0/hyo-storage-0.2.0.tar.gz",
+          "sha256": "9e5a270b4343bbfe557febbfc3f45335ebd09d8c2dbd87d58c06e6a8a48f1749",
+          "entrypoint": "init.lua",
+          "dependencies": {
+            "hyo-core": ">=0.1.0"
+          },
+          "permissions": []
         }
       }
     },
@@ -90,6 +126,15 @@
         "0.1.0": {
           "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-ui-v0.1.0/hyo-ui-0.1.0.tar.gz",
           "sha256": "51c8d91fbae5d7ce4975ac88b218da5182bba969da5142c6098b3783701129ee",
+          "entrypoint": "init.lua",
+          "dependencies": {
+            "hyo-core": ">=0.1.0"
+          },
+          "permissions": []
+        },
+        "0.2.0": {
+          "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-ui-v0.2.0/hyo-ui-0.2.0.tar.gz",
+          "sha256": "db6b36d5fc0d261ec37717137a02a9a9921005c3274ac958ba387a789dc0e477",
           "entrypoint": "init.lua",
           "dependencies": {
             "hyo-core": ">=0.1.0"
