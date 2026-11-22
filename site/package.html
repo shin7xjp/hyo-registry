@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package — Hyo Registry</title>
+  <meta name="description" content="Package details — Hyo Registry">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+  <!-- Atmospheric background -->
+  <div class="atmos" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Hyo Registry home">
+        <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+          <defs>
+            <linearGradient id="brand-g" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a78bfa"/>
+              <stop offset="100%" stop-color="#6d28d9"/>
+            </linearGradient>
+          </defs>
+          <rect width="32" height="32" rx="6" fill="#0f0f14"/>
+          <text x="16" y="22" text-anchor="middle" font-family="system-ui" font-weight="700" font-size="18" fill="url(#brand-g)">H</text>
+        </svg>
+        Hyo <span>Registry</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Explore</a></li>
+        <li>
+          <a href="https://github.com/shin7xjp/hyo-registry" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57l-.01-2.24c-3.34.72-4.04-1.42-4.04-1.42a3.18 3.18 0 0 0-1.33-1.75c-1.09-.74.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.56 2.56 0 0 0 3.5 1 2.56 2.56 0 0 1 .76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23a4.3 4.3 0 0 1 .12 3.18 4.64 4.64 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92a2.86 2.86 0 0 1 .82 2.23l-.01 3.3c0 .31.22.69.83.57A12 12 0 0 0 12 .3"/></svg>
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="pkg-detail">
+    <!-- Populated by JS -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-text">Hyo Registry — Official package directory for the Hyo framework.</span>
+      <ul class="footer-links">
+        <li><a href="https://github.com/shin7xjp/hyo-registry" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initPackagePage } from './assets/js/package.js';
+
+    // Init nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('open');
+        links.classList.toggle('open');
+      });
+    }
+
+    initPackagePage();
+  </script>
+</body>
+</html>
+

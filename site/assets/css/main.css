@@ -1,0 +1,243 @@
+/* ─── Hyo Registry — Design System ─── */
+
+:root {
+  /* surfaces */
+  --bg-root: #08080c;
+  --bg-surface: #0f0f16;
+  --bg-surface-raised: #161620;
+  --bg-surface-hover: #1c1c2a;
+  --bg-overlay: rgba(8,8,12,.85);
+
+  /* borders */
+  --border-subtle: rgba(255,255,255,.06);
+  --border-default: rgba(255,255,255,.09);
+  --border-hover: rgba(255,255,255,.14);
+  --border-accent: rgba(139,92,246,.35);
+
+  /* text */
+  --text-primary: #ededed;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+  --text-accent: #a78bfa;
+  --text-accent-bright: #c4b5fd;
+
+  /* accents */
+  --accent: #8b5cf6;
+  --accent-muted: rgba(139,92,246,.15);
+  --accent-glow: rgba(139,92,246,.08);
+
+  /* functional */
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #f87171;
+
+  /* spacing */
+  --space-xs: .25rem;
+  --space-sm: .5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* transitions */
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+  --duration-slow: 350ms;
+}
+
+/* ─── Reset & Base ─── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-root);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+::selection {
+  background: var(--accent-muted);
+  color: var(--text-accent-bright);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-default); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+
+/* ─── Layout ─── */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 var(--space-md); }
+}
+
+/* ─── Atmospheric Background ─── */
+
+.atmos {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.atmos::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -120px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(139,92,246,.07) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.atmos::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  left: -60px;
+  background: radial-gradient(circle, rgba(99,102,241,.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* ─── Typography ─── */
+
+.heading-xl {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+
+.heading-lg {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+}
+
+.heading-md {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1.3;
+}
+
+.heading-sm {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1.4;
+}
+
+.text-body {
+  font-size: .9375rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.text-sm {
+  font-size: .8125rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+  font-size: .8125rem;
+}
+
+/* ─── Utility ─── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.fade-in {
+  animation: fadeIn var(--duration-slow) var(--ease-out) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-surface-raised) 25%, var(--bg-surface-hover) 50%, var(--bg-surface-raised) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.8s infinite linear;
+  border-radius: var(--radius-sm);
+}
+
