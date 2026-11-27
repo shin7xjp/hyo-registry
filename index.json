@@ -142,6 +142,22 @@
           "permissions": []
         }
       }
+    },
+    "hyo-epub": {
+      "description": "Full EPUB 2/3 parser, nested TOC, full-text search, bookmarks, inline images, and themed reader widget for Hyo",
+      "versions": {
+        "0.2.0": {
+          "url": "https://github.com/shin7xjp/hyo-registry/releases/download/hyo-epub-v0.2.0/hyo-epub-0.2.0.tar.gz",
+          "sha256": "1480acbfad1153591273e49d7e67c29bae85ba0efa002abff205ca81d5826358",
+          "entrypoint": "init.lua",
+          "dependencies": {
+            "hyo-core": ">=0.1.0",
+            "hyo-ui": ">=0.2.0",
+            "hyo-storage": ">=0.2.0"
+          },
+          "permissions": []
+        }
+      }
     }
   }
 }
